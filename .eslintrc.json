@@ -1,0 +1,35 @@
+{
+  "extends": ["react-app", "prettier", "prettier/react"],
+  "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "new-cap": "off",
+    "no-invalid-this": "off",
+    "consistent-return": "off",
+    "valid-jsdoc": "off",
+    "no-unused-vars": "error",
+    "no-redeclare": "error",
+    "no-console": "error",
+    "react/prop-types": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/__tests__/*.js", "**/*.test.js"],
+      "rules": {
+        "max-len": [
+          "error",
+          { "code": 100, "ignoreUrls": true, "ignoreStrings": true }
+        ],
+        "max-nested-callbacks": "off",
+        "no-magic-numbers": "off",
+        "max-statements": ["error", 30]
+      }
+    },
+    {
+      "files": ["src/components/**/*.js", "src/views/**/*.js"],
+      "rules": {
+        "no-magic-numbers": "off"
+      }
+    }
+  ]
+}
