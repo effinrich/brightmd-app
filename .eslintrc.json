@@ -10,7 +10,8 @@
     "no-unused-vars": "error",
     "no-redeclare": "error",
     "no-console": "error",
-    "react/prop-types": "error"
+    "react/prop-types": "error",
+    "import/no-anonymous-default-export": "off"
   },
   "overrides": [
     {
@@ -23,6 +24,12 @@
         "max-nested-callbacks": "off",
         "no-magic-numbers": "off",
         "max-statements": ["error", 30]
+      }
+    },
+    {
+      "files": ["src/components/**/*.stories.js"],
+      "rules": {
+        "react/prop-types": "off"
       }
     },
     {

@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "chromatic": "chromatic"
   },
   "eslintConfig": {
     "extends": [
@@ -50,5 +51,23 @@
     "@storybook/react": "^6.1.11",
     "ejs-lint": "^1.1.0",
     "eslint-config-prettier": "^7.0.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/index.js",
+      "!src/**/story.js",
+      "!src/**/story.wrappers.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 25,
+        "functions": 25,
+        "lines": 25,
+        "statements": 25
+      }
+    },
+    "resetMocks": false
   }
 }
