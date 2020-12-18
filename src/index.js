@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom'
 import LogRocket from 'logrocket'
 
 import './index.css'
-import App from './App'
+import App from 'views/App'
 import reportWebVitals from './reportWebVitals'
 
 // app monitoring service
