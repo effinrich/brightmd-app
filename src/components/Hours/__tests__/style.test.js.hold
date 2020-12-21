@@ -1,0 +1,27 @@
+import React from 'react'
+import { mount } from 'enzyme'
+import { ThemeProvider } from 'styled-components'
+
+import theme from 'theme'
+import { StyledHoursMessage } from '../style'
+
+describe('StyledHoursMessage', () => {
+  let props
+
+  beforeEach(() => {
+    props = {
+      input: { value: '' },
+      meta: { active: true, touched: false, visited: true }
+    }
+  })
+
+  it('should render warning color', () => {
+    props.meta.warning = 'Has Warning'
+    const wrapper = mount(
+      <ThemeProvider theme={theme}>
+        <StyledHoursMessage {...props} />
+      </ThemeProvider>
+    )
+    expect(wrapper).toMatchSnapshot()
+  })
+})
