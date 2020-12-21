@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Text/BodyCopy default 1`] = `
+.c0 {
+  font-size: 16px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+<p
+  className="c0"
+  fontSize={2}
+>
+  Poutine kitsch scenester shaman biodiesel shoreditch VHS, sustainable XOXO hashtag. Selvage shoreditch mustache venmo crucifix. Gochujang keffiyeh trust fund dreamcatcher glossier taxidermy narwhal fam organic post-ironic iceland sustainable.
+</p>
+`;
+
+exports[`Storyshots Text/BodyCopy light 1`] = `
+.c0 {
+  font-size: 16px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-align: left;
+  overflow-wrap: break-word;
+  font-weight: 300;
+}
+
+<p
+  className="c0"
+  fontSize={2}
+>
+  Poutine kitsch scenester shaman biodiesel shoreditch VHS, sustainable XOXO hashtag. Selvage shoreditch mustache venmo crucifix. Gochujang keffiyeh trust fund dreamcatcher glossier taxidermy narwhal fam organic post-ironic iceland sustainable.
+</p>
+`;
+
+exports[`Storyshots Text/BodyCopy w/align center 1`] = `
+.c0 {
+  font-size: 16px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+<p
+  className="c0"
+  fontSize={2}
+>
+  Poutine kitsch scenester shaman biodiesel shoreditch VHS, sustainable XOXO hashtag. Selvage shoreditch mustache venmo crucifix. Gochujang keffiyeh trust fund dreamcatcher glossier taxidermy narwhal fam organic post-ironic iceland sustainable.
+</p>
+`;
+
+exports[`Storyshots Text/BodyCopy w/align right 1`] = `
+.c0 {
+  font-size: 16px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-align: right;
+  overflow-wrap: break-word;
+}
+
+<p
+  className="c0"
+  fontSize={2}
+>
+  Poutine kitsch scenester shaman biodiesel shoreditch VHS, sustainable XOXO hashtag. Selvage shoreditch mustache venmo crucifix. Gochujang keffiyeh trust fund dreamcatcher glossier taxidermy narwhal fam organic post-ironic iceland sustainable.
+</p>
+`;
+
+exports[`Storyshots Text/BodyCopy w/color 1`] = `
+.c0 {
+  color: #ff9900;
+  font-size: 16px;
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+<p
+  className="c0"
+  color="#ff9900"
+  fontSize={2}
+>
+  Poutine kitsch scenester shaman biodiesel shoreditch VHS, sustainable XOXO hashtag. Selvage shoreditch mustache venmo crucifix. Gochujang keffiyeh trust fund dreamcatcher glossier taxidermy narwhal fam organic post-ironic iceland sustainable.
+</p>
+`;
