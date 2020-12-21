@@ -1,0 +1,58 @@
+{
+  "_id": 1,
+  "fullName": "Bright.md Hospital",
+  "shortName": "BMD",
+  "description": "Get a quick diagnosis for many medical conditions from your computer or mobile device.",
+  "operatingHours": [
+    {
+      "close": {
+        "time": 1700,
+        "day": 1
+      },
+      "open": {
+        "time": 900,
+        "day": 1
+      }
+    },
+    {
+      "close": {
+        "time": 1700,
+        "day": 2
+      },
+      "open": {
+        "time": 900,
+        "day": 2
+      }
+    },
+    {
+      "close": {
+        "time": 1700,
+        "day": 3
+      },
+      "open": {
+        "time": 900,
+        "day": 3
+      }
+    },
+    {
+      "close": {
+        "time": 1700,
+        "day": 4
+      },
+      "open": {
+        "time": 900,
+        "day": 4
+      }
+    },
+    {
+      "close": {
+        "time": 1700,
+        "day": 5
+      },
+      "open": {
+        "time": 900,
+        "day": 5
+      }
+    }
+  ]
+}
