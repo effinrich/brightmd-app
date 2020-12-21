@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     background-color: ${theme.bodyBackgroundColor};
-    color: ${theme.defaultTextColor};
+    color: ${theme.textColor};
   }
   
   a {
@@ -32,7 +32,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-export default Decorator => (
+export default (Decorator) => (
   <ThemeProvider theme={theme}>
     {Decorator()}
     <GlobalStyle />
