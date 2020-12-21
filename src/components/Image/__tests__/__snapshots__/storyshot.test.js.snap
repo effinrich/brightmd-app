@@ -1,0 +1,192 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Image naked story 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s-media-cache-ak0.pinimg.com/originals/6d/96/41/6d9641691af89520f3b19b26bca4b5fc.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots Image thumb w/maxWidth 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s-media-cache-ak0.pinimg.com/originals/6d/96/41/6d9641691af89520f3b19b26bca4b5fc.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots Image w/altImage prop and broken image 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s-media-cache-ak0.pinimg.com/originals/6d/96/41/6d9641691af89520f3b19b26bca4b5fc.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots Image w/border 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  border: solid 4px rgb(251,250,252);
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s-media-cache-ak0.pinimg.com/originals/6d/96/41/6d9641691af89520f3b19b26bca4b5fc.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots Image w/border color 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  border: solid 4px #ff9900;
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="https://s-media-cache-ak0.pinimg.com/originals/6d/96/41/6d9641691af89520f3b19b26bca4b5fc.jpg"
+  />
+</div>
+`;
+
+exports[`Storyshots Image w/missing image 1`] = `
+.c0 {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.c0 img {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+  background-color: rgb(197,197,197);
+  display: block;
+}
+
+<div
+  className="c0"
+>
+  <img
+    alt="kitty"
+    onError={[Function]}
+    onLoad={[Function]}
+    src="brokenimageurl.com"
+  />
+</div>
+`;
