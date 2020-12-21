@@ -1,0 +1,620 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Toggle disabled 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c5 {
+  position: absolute;
+  cursor: not-allowed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c5:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: rgb(251,250,252);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c3 {
+  display: none;
+}
+
+.c3:checked + .c4 {
+  background-color: rgb(70,55,134);
+}
+
+.c3:focus + .c4 {
+  box-shadow: 0 0 1px rgb(70,55,134);
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={false}
+    className="c1"
+    onChange={[Function]}
+  >
+    <label
+      className="c2"
+    >
+      <input
+        checked={false}
+        className="c3"
+        disabled={true}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={false}
+        className="c4 c5"
+        disabled={true}
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle touched 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c5 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c5:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c3 {
+  display: none;
+}
+
+.c3:checked + .c4 {
+  background-color: rgb(70,55,134);
+}
+
+.c3:focus + .c4 {
+  box-shadow: 0 0 1px rgb(70,55,134);
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={true}
+    className="c1"
+    onChange={[Function]}
+  >
+    <label
+      className="c2"
+    >
+      <input
+        checked={true}
+        className="c3"
+        disabled={false}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={true}
+        className="c4 c5"
+        disabled={false}
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle untouched 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c5 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c5:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c3 {
+  display: none;
+}
+
+.c3:checked + .c4 {
+  background-color: rgb(70,55,134);
+}
+
+.c3:focus + .c4 {
+  box-shadow: 0 0 1px rgb(70,55,134);
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={false}
+    className="c1"
+    onChange={[Function]}
+  >
+    <label
+      className="c2"
+    >
+      <input
+        checked={false}
+        className="c3"
+        disabled={false}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={false}
+        className="c4 c5"
+        disabled={false}
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle w/error 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c5 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c5:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c3 {
+  display: none;
+}
+
+.c3:checked + .c4 {
+  background-color: rgb(202,25,0);
+}
+
+.c3:focus + .c4 {
+  box-shadow: 0 0 1px rgb(202,25,0);
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={true}
+    className="c1"
+    onChange={[Function]}
+  >
+    <label
+      className="c2"
+    >
+      <input
+        checked={true}
+        className="c3"
+        disabled={false}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={true}
+        className="c4 c5"
+        disabled={false}
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle w/toggleText 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  display: inline-block;
+  padding-right: 4px;
+  line-height: 22px;
+}
+
+.c3 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c6 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c6:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c4 {
+  display: none;
+}
+
+.c4:checked + .c5 {
+  background-color: rgb(70,55,134);
+}
+
+.c4:focus + .c5 {
+  box-shadow: 0 0 1px rgb(70,55,134);
+}
+
+.c4:checked + .c5:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={false}
+    className="c1"
+    onChange={[Function]}
+  >
+    <span
+      checked={false}
+      className="c2"
+      onChange={[Function]}
+    >
+      Off
+    </span>
+    <label
+      className="c3"
+    >
+      <input
+        checked={false}
+        className="c4"
+        disabled={false}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={false}
+        className="c5 c6"
+        disabled={false}
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Toggle w/warning 1`] = `
+.c0 {
+  background-color: transparent;
+  padding: 15px;
+  height: auto;
+}
+
+.c2 {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 20.5px;
+}
+
+.c5 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(197,197,197);
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.c5:before {
+  position: absolute;
+  content: '';
+  height: 16.5px;
+  width: 16.5px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+}
+
+.c3 {
+  display: none;
+}
+
+.c3:checked + .c4 {
+  background-color: rgb(255,152,0);
+}
+
+.c3:focus + .c4 {
+  box-shadow: 0 0 1px rgb(255,152,0);
+}
+
+.c3:checked + .c4:before {
+  -webkit-transform: translateX(17px);
+  -ms-transform: translateX(17px);
+  transform: translateX(17px);
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+<div
+  className="c0"
+  height="auto"
+>
+  <div
+    checked={true}
+    className="c1"
+    onChange={[Function]}
+  >
+    <label
+      className="c2"
+    >
+      <input
+        checked={true}
+        className="c3"
+        disabled={false}
+        name="toggle"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <span
+        checked={true}
+        className="c4 c5"
+        disabled={false}
+      />
+    </label>
+  </div>
+</div>
+`;
