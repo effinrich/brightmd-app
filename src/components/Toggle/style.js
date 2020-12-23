@@ -13,18 +13,18 @@ export const StyledToggleText = styled.span`
 export const StyledToggleSwitch = styled.label`
   position: relative;
   display: inline-block;
-  width: 38px;
-  height: 20.5px;
+  width: 28px;
+  height: 16.5px;
 `
 
 export const StyledToggleSlider = styled.span`
   position: absolute;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: ${(props) => props.disabledColor};
+  background-color: ${props => props.disabledColor};
   -webkit-transition: 0.4s;
   transition: 0.4s;
   border-radius: 50px;
@@ -32,12 +32,12 @@ export const StyledToggleSlider = styled.span`
   &:before {
     position: absolute;
     content: '';
-    height: 16.5px;
-    width: 16.5px;
+    height: 12.5px;
+    width: 12.5px;
     left: 2px;
     bottom: 2px;
-    background-color: ${(props) =>
-      props.disabled ? theme.superLightGrey : 'white'};
+    background-color: ${props =>
+      props.disabled ? theme.disabledButtonText : 'white'};
     -webkit-transition: 0.4s;
     transition: 0.4s;
     border-radius: 50%;
@@ -48,7 +48,7 @@ export const StyledToggleSlider = styled.span`
 export const StyledToggleInput = styled.input`
   display: none;
   &:checked + ${StyledToggleSlider} {
-    background-color: ${(props) => {
+    background-color: ${props => {
       if (props.error) {
         return theme.errorColor
       }
@@ -61,7 +61,7 @@ export const StyledToggleInput = styled.input`
 
   &:focus + ${StyledToggleSlider} {
     box-shadow: 0 0 1px
-      ${(props) => {
+      ${props => {
         if (props.error) {
           return theme.errorColor
         }
@@ -72,7 +72,7 @@ export const StyledToggleInput = styled.input`
       }};
   }
   &:checked + ${StyledToggleSlider}:before {
-    transform: translateX(17px);
+    transform: translateX(12px);
   }
 `
 StyledToggleInput.displayName = 'StyledToggleInput'

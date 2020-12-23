@@ -19,13 +19,11 @@ const App = loadable(/* istanbul ignore next */ () => import('views/App'))
 LogRocket.init('8jgrsv/brightmd')
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <App />
-      </ThemeProvider>
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>,
   document.getElementById('root')
 )
 

@@ -4,6 +4,7 @@ import { Box } from 'reflexbox'
 import { createGlobalStyle } from 'styled-components'
 import loadable from '@loadable/component'
 
+import { Customer } from 'models'
 import theme from 'theme'
 import AppBar from 'components/AppBar'
 import Image from 'components/Image'
@@ -12,7 +13,7 @@ import Logo from 'assets/logo.png'
 
 import { fetchCustomer } from 'store/customer'
 
-import { StyledAppContainer } from './style'
+import StyledApp, { StyledAppContainer } from './style'
 
 const Hours = loadable(/* istanbul ignore next */ () => import('views/Hours'))
 const Branding = loadable(
@@ -64,7 +65,7 @@ const App = props => {
   }, [dispatch])
 
   return (
-    <div>
+    <StyledApp mb={5}>
       <AppBar data-testid="app-bar">
         <Box>
           <Image maxWidth={240} alt="logo" src={Logo} />
@@ -72,7 +73,7 @@ const App = props => {
       </AppBar>
       <StyledAppContainer pt={[100, 150]} px={[0, 10]}>
         <Box variant="card">
-          <Hours customer={customer} />
+          <Hours customer={new Customer(customer)} />
           <Box py={3}>
             <Separator color="#ccc" />
           </Box>
@@ -80,7 +81,7 @@ const App = props => {
         </Box>
       </StyledAppContainer>
       <GlobalStyle {...props} />
-    </div>
+    </StyledApp>
   )
 }
 

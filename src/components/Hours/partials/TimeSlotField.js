@@ -1,18 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Field, change } from 'redux-form/immutable'
+import { Field, change } from 'redux-form'
 import { connect } from 'react-redux'
 import moment from 'moment'
-import { FaPlusCircle, FaMinusCircle } from 'react-icons/fa'
 import { Map } from 'immutable'
 import padStart from 'lodash/padStart'
-import { Flex } from 'reflexbox'
+import { Flex, Box } from 'reflexbox'
 
-import theme from 'theme'
-// import Flex from 'components/Flex'
-import Container from 'components/Container'
 import TimeField from 'components/TimeField'
-import FlatButton from 'components/FlatButton'
 import { TabletDown } from 'components/Responsive'
 
 import getCloseDay from '../utils/getCloseDay'
@@ -26,7 +21,7 @@ export const timeSlotHandlers = {
     const closeDay = getCloseDay(
       dayIndex,
       currentValue,
-      hoursFields.get(fieldIndex).getIn(['close', 'time'])
+      hoursFields.get(fieldIndex).close.time
     )
     change(meta.form, `${fieldName}.close.day`, closeDay)
   },
@@ -38,14 +33,15 @@ export const timeSlotHandlers = {
     const { hoursFields, fieldIndex, fieldName, meta, change, dayIndex } = props
     const closeDay = getCloseDay(
       dayIndex,
-      hoursFields.get(fieldIndex).getIn(['open', 'time']),
+      hoursFields.get(fieldIndex).open.time,
       currentValue
     )
     change(meta.form, `${fieldName}.close.day`, closeDay)
   },
 
-  handleParseTime: props => ([time]) =>
-    parseInt(moment(time).format('HHmm'), 10),
+  handleParseTime: props => ([time]) => {
+    return parseInt(moment(time).format('HHmm'), 10)
+  },
 
   handleFormatTime: props => time => {
     if (time || time === 0) {
@@ -72,19 +68,18 @@ export const timeSlotHandlers = {
 }
 
 const TimeSlotField = props => {
-  const { fieldName, fieldIndex, hoursFields } = props
+  const { fieldName } = props
 
   return (
     <TabletDown>
       {isTablet => (
-        <Flex pb={3} pt={3} alignItems="center">
-          <Container width={1 / 2} pr={1}>
+        <Flex alignItems="center" mt={3}>
+          <Box width={1 / 2} pr={1}>
             <Field
               className="__startTime__"
               name={`${fieldName}.open.time`}
               type="text"
               component={TimeField}
-              label="Start time"
               parse={event => timeSlotHandlers.handleParseTime(props)(event)}
               format={event => timeSlotHandlers.handleFormatTime(props)(event)}
               // validate={validationRules.hours}
@@ -94,16 +89,14 @@ const TimeSlotField = props => {
                   currentValue
                 )
               }
-              expandLabel={isTablet}
             />
-          </Container>
-          <Container width={1 / 2} pl={1}>
+          </Box>
+          <Box width={1 / 2} pl={1}>
             <Field
               className="__endTime__"
               name={`${fieldName}.close.time`}
               type="text"
               component={TimeField}
-              label="End time"
               parse={event => timeSlotHandlers.handleParseTime(props)(event)}
               format={event => timeSlotHandlers.handleFormatTime(props)(event)}
               // validate={validationRules.hours}
@@ -113,55 +106,8 @@ const TimeSlotField = props => {
                   currentValue
                 )
               }
-              expandLabel={isTablet}
             />
-          </Container>
-          {hoursFields.get(fieldIndex) === hoursFields.getAll().first() ? (
-            <Container
-              width={[1 / 8, 1 / 16]}
-              pl={1}
-              style={{ textAlign: 'right' }}
-            >
-              <FlatButton
-                className="__addSlot__"
-                circle
-                primary
-                p="2px"
-                onClick={event =>
-                  timeSlotHandlers.handleAddSlotClick(props)(event)
-                }
-                disabled={hoursFields.length > 1}
-                color={
-                  hoursFields.length > 1
-                    ? theme.disabledButtonBg
-                    : theme.brandColor
-                }
-                style={{ lineHeight: 0 }}
-              >
-                <FaPlusCircle size={20} />
-              </FlatButton>
-            </Container>
-          ) : (
-            <Container
-              width={[1 / 8, 1 / 16]}
-              pl={1}
-              style={{ textAlign: 'right' }}
-            >
-              <FlatButton
-                className="__removeSlot__"
-                circle
-                danger
-                p="2px"
-                onClick={event =>
-                  timeSlotHandlers.handleRemoveSlotClick(props)(event)
-                }
-                color={theme.errorColor}
-                style={{ lineHeight: 0 }}
-              >
-                <FaMinusCircle size={20} />
-              </FlatButton>
-            </Container>
-          )}
+          </Box>
         </Flex>
       )}
     </TabletDown>
@@ -170,8 +116,6 @@ const TimeSlotField = props => {
 
 const propTypes = {
   fieldName: PropTypes.string,
-  fieldIndex: PropTypes.number,
-  hoursFields: PropTypes.object,
   dayIndex: PropTypes.number,
   meta: PropTypes.shape({
     touched: PropTypes.bool,
@@ -184,7 +128,4 @@ const propTypes = {
 
 TimeSlotField.propTypes = propTypes
 
-export default connect(
-  null,
-  { change }
-)(TimeSlotField)
+export default connect(null, { change })(TimeSlotField)

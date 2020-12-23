@@ -1,71 +1,57 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Box, Flex } from 'reflexbox'
-import { List, fromJS } from 'immutable'
+import { List } from 'immutable'
 import memoize from 'lodash/memoize'
 import padStart from 'lodash/padStart'
 import moment from 'moment'
 
 import BodyCopy from 'components/Text/BodyCopy'
 
-const normalizeHours = memoize(hours =>
-  new List()
-    .setSize(7)
-    .map((d, i) => hours.filter(h => h.getIn(['open', 'day']) === i))
-)
+const ReadOnly = ({ hours: operatingHours }) => {
+  const normalizeHours = memoize(hours =>
+    new List()
+      .setSize(7)
+      .map((d, i) => hours.filter(h => h.getIn(['open', 'day']) === i))
+  )
 
-const formatTime = time => moment(padStart(time, 4, 0), 'Hmm').format('h:mm A')
-const dayMap = [
-  'Sunday',
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday'
-]
+  const formatTime = time =>
+    moment(padStart(time, 4, 0), 'Hmm').format('h:mm A')
 
-const renderDay = (day, i) => (
-  <Flex key={i} pt={2} justifyContent="space-between" width={[1, 1 / 2]}>
-    <Box width={1 / 3}>
-      <BodyCopy fontSize={16} fontWeight={500}>
-        {dayMap[i]}
-      </BodyCopy>
-    </Box>
-    <Box width={1 / 3}>
-      {day.size > 0 ? (
-        <BodyCopy fontSize={16} fontWeight={500}>
-          OPEN
-        </BodyCopy>
-      ) : (
-        <BodyCopy fontSize={16} fontWeight={500}>
-          CLOSED
-        </BodyCopy>
-      )}
-    </Box>
-    <Box width={1 / 3}>
-      {day.size > 0 &&
-        day.map((hours, i) => (
-          <BodyCopy key={i} fontSize={16} fontWeight={500}>
-            {[
-              formatTime(hours.getIn(['open', 'time'])),
-              formatTime(hours.getIn(['close', 'time']))
-            ].join(' - ')}
+  const renderDay = (day, i) => (
+    <Flex key={i} justifyContent="space-between" width={[1, 1 / 2]}>
+      <Box width={1 / 2} minWidth={110} pl={36}>
+        {day.size > 0 ? (
+          <BodyCopy fontSize={16} fontWeight={500} mt={4}>
+            OPEN
           </BodyCopy>
-        ))}
-    </Box>
-  </Flex>
-)
+        ) : (
+          <BodyCopy fontSize={16} fontWeight={500} mt={4}>
+            CLOSED
+          </BodyCopy>
+        )}
+      </Box>
+      <Box width={1 / 2} minWidth={150}>
+        {day.size > 0 &&
+          day.map((hours, i) => (
+            <BodyCopy key={i} fontSize={16} fontWeight={500} mt={4}>
+              {[
+                formatTime(hours.getIn(['open', 'time'])),
+                formatTime(hours.getIn(['close', 'time']))
+              ].join(' - ')}
+            </BodyCopy>
+          ))}
+      </Box>
+    </Flex>
+  )
 
-const ReadOnly = ({ operatingHours }) => {
-  const immutableHours = fromJS(operatingHours)
-  const hours = normalizeHours(immutableHours)
+  const hours = normalizeHours(operatingHours)
 
-  return <div>{hours.map(renderDay)}</div>
+  return hours.map(renderDay)
 }
 
 ReadOnly.propTypes = {
-  operatingHours: PropTypes.array
+  hours: PropTypes.object
 }
 
 export default ReadOnly

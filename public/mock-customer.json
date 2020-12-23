@@ -2,57 +2,70 @@
   "_id": 1,
   "fullName": "Bright.md Hospital",
   "shortName": "BMD",
-  "description": "Get a quick diagnosis for many medical conditions from your computer or mobile device.",
-  "operatingHours": [
+  "welcomeText": "Get a quick diagnosis for many medical conditions from your computer or mobile device.",
+  "hours": [
     {
-      "close": {
-        "time": 1700,
-        "day": 1
-      },
-      "open": {
-        "time": 900,
-        "day": 1
-      }
+      "enabled": false,
+      "hours": [
+        {
+          "open": { "day": 0, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 0, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
     },
     {
-      "close": {
-        "time": 1700,
-        "day": 2
-      },
-      "open": {
-        "time": 900,
-        "day": 2
-      }
+      "enabled": true,
+      "hours": [
+        {
+          "open": { "day": 1, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 1, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
     },
     {
-      "close": {
-        "time": 1700,
-        "day": 3
-      },
-      "open": {
-        "time": 900,
-        "day": 3
-      }
+      "enabled": true,
+      "hours": [
+        {
+          "open": { "day": 2, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 2, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
     },
     {
-      "close": {
-        "time": 1700,
-        "day": 4
-      },
-      "open": {
-        "time": 900,
-        "day": 4
-      }
+      "enabled": true,
+      "hours": [
+        {
+          "open": { "day": 3, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 3, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
     },
     {
-      "close": {
-        "time": 1700,
-        "day": 5
-      },
-      "open": {
-        "time": 900,
-        "day": 5
-      }
+      "enabled": true,
+      "hours": [
+        {
+          "open": { "day": 4, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 4, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
+    },
+    {
+      "enabled": true,
+      "hours": [
+        {
+          "open": { "day": 5, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 5, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
+    },
+    {
+      "enabled": false,
+      "hours": [
+        {
+          "open": { "day": 6, "time": 900, "_id": "5f4d4ce6d5ced60009b63792" },
+          "close": { "day": 6, "time": 1500, "_id": "5f4d4ce6d5ced60009b63791" }
+        }
+      ]
     }
   ]
 }

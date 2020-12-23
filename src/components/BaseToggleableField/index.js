@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import BodyCopy from 'components/Text/BodyCopy'
+
 import StyledBaseToggleableField, {
   StyledBaseToggleableFieldLabelContainer,
   StyledBaseToggleableFieldInputContainer,
@@ -31,8 +33,8 @@ const propTypes = {
 
 const defaultProps = {
   labelPosition: 'left',
-  fontSize: 2,
-  mb: 1
+  fontSize: 2
+  // mb: 1
 }
 
 const BaseToggleableField = props => {
@@ -53,7 +55,9 @@ const BaseToggleableField = props => {
     <StyledBaseToggleableField {...styledProps}>
       <StyledBaseToggleableFieldInputContainer {...styledLogicProps}>
         <StyledBaseToggleableFieldLabelContainer {...styledLogicProps}>
-          <label htmlFor={input.name}>{label}</label>
+          <BodyCopy fontSize={16} fontWeight={500} mb={0} mt={0}>
+            <label htmlFor={input.name}>{label}</label>
+          </BodyCopy>
           <StyledBaseToggleableFieldMessageContainer>
             {meta.touched &&
               ((meta.error && (

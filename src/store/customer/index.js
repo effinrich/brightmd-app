@@ -15,6 +15,9 @@ const slice = createSlice({
     },
     hasError: (state, action) => {
       state.error = action.payload
+    },
+    setCustomerSuccess: (state, action) => {
+      state.customer = action.payload
     }
   }
 })
@@ -22,12 +25,20 @@ const slice = createSlice({
 export default slice.reducer
 
 // Actions
-const { fetchCustomerSuccess, hasError } = slice.actions
+const { fetchCustomerSuccess, hasError, setCustomerSuccess } = slice.actions
 
 export const fetchCustomer = () => async dispatch => {
   try {
     const { data } = await api.get('./mock-customer.json')
     dispatch(fetchCustomerSuccess(data))
+  } catch (e) {
+    dispatch(hasError(e.response.data.message))
+  }
+}
+
+export const setCustomer = mutatedCustomer => async dispatch => {
+  try {
+    dispatch(setCustomerSuccess(mutatedCustomer))
   } catch (e) {
     dispatch(hasError(e.response.data.message))
   }

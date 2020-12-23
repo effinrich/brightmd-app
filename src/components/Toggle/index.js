@@ -26,8 +26,8 @@ export default class Toggle extends PureComponent {
   static defaultProps = {
     checked: false,
     disabled: false,
-    enabledColor: theme.brandColor,
-    disabledColor: theme.lightMedGrey
+    enabledColor: theme.primaryButtonUpBg,
+    disabledColor: theme.medGrey
   }
 
   constructor(props) {

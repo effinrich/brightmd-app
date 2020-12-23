@@ -11,5 +11,6 @@ export default styled(Flex)`
   width: 100%;
   z-index: 1;
   min-height: 72px;
+  background-color: white;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 `

@@ -20,13 +20,14 @@ export default {
   fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72], // eslint-disable-line no-magic-numbers
 
   // Colors
-  brandColor: '#31bcca',
+  brandColor: '#6162FF',
   textColor: 'rgb(122, 122, 122)',
   errorColor: 'rgb(202, 25, 0)',
   warningColor: 'rgb(255, 152, 0)',
   successColor: 'rgb(98, 169, 116)',
   infoColor: 'rgb(91, 152, 210)',
-  medGrey: 'rgb(170, 170, 170)',
+  medGrey: '#A2A2A2',
+  lightMedGrey: 'rgb(197, 197, 197)',
   primaryButtonUpBg: '#6162FF',
   primaryButtonUpText: 'white',
   primaryButtonOverBg: '#65A5FF',
@@ -58,7 +59,7 @@ export default {
   },
   variants: {
     card: {
-      p: 3,
+      p: [2, 3],
       borderRadius: 'default',
       bg: 'white',
       boxShadow: 'card'

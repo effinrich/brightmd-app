@@ -3,6 +3,10 @@ import { space } from 'styled-system'
 
 import theme from 'theme'
 
+export default styled.div`
+  ${space};
+`
+
 export const StyledAppContainer = styled.div`
   ${space};
 

@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components'
 import { space, color, fontSize } from 'styled-system'
+
+import theme from 'theme'
 import { maxWidth } from 'utils/styled'
 
 const flexStyleMap = {
@@ -18,23 +20,25 @@ export const StyledBaseToggleableFieldInputContainer = styled.div`
 `
 
 export const StyledBaseToggleableFieldLabelContainer = styled.div`
+  font-weight: 500;
+  font-size: 16px;
   ${({ labelPosition }) =>
     labelPosition === 'right' &&
     css`
       padding-left: 8px;
     `};
 
-  color: ${({ meta: { active, touched, error, warning }, disabled, theme }) => {
+  color: ${({ meta: { active, touched, error, warning }, disabled }) => {
     if (!active && disabled) return theme.lightMedGrey
     if (touched && error) return theme.errorColor
     if (touched && warning) return theme.warningColor
-    if (!active) return theme.darkGrey
+    if (!active) return theme.textColor
     return theme.brandColor
   }};
 `
 
 export const StyledBaseToggleableFieldMessageContainer = styled.div`
-  padding-top: 5px;
+  padding-top: 7px;
   font-size: 12px;
   line-height: 15px;
 `
@@ -55,6 +59,6 @@ export default styled.div`
   ${fontSize};
   ${maxWidth};
   position: relative;
-  line-height: 24px;
+  line-height: 20px;
   width: 100%;
 `
