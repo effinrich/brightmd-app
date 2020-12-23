@@ -6,6 +6,9 @@
 # Prompt #2:
 For production I would write unit tests and create components via storybook (I strongly encourage you to check it out, see more below) for faster approval and tweaks from peers. I would also spend far more time on the mobile friendly layout until that was rock solid.  The production application would be a mirror of the mocks or very close.  Any and all image asssets would be compressed using TinyPNG or similar.  I used code-splitting and preload for speed, which I would also do in production, as well as ship with Docker setup and integrated with a CI like CircleCi or similar.  Also, I would use react-final-form, formik or one of the newer, much lighter form solutions. I would have an open channel to creative to ensure everything is done to spec.  Lastly, I would bang on the app looking for ways to break it, then hand it off to someone else to do the same or an actual QA runner.
 
+# Try Storyook:
+You'll notice a "storybook" script in package.json.  Open a terminal to the root of the project, run "yarn storybook" to launch an interactive sweet for testing components in isolation. This will open on localhost:6006.  The components in the stories directory are just examples as I didn't have time to port my older formatted stories to run here, but you'll still get the gist and hopefully find it useful.
+
 # Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
