@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Bright.md Take-Home Challenge
+- monitoring: I used a couple tools I've wanted to try out.  Those are LogRocket and chromatic.  I can create logins by request.  There's also a monitoring logged to console using reportWebVitals.
+- Mobile-friendly view - It's very tight in there, but mobile (iOS) is passable on my end.  This is one area I'd focus far more for production.
+- Jazz it up - I used a few of the components from the UI library I created for Freebird.  These include the hours form, the animated inputs, Image component and more.  Albeit an antiquated solution, I used redux-form to handle the form data state management as that's a perfect use for redux-form.  I also created a actions/reducers to fetch the customer data via local JSON file to simulate a production app's user and app flow.   
+
+# Prompt #2:
+For production I would write unit tests and create components via storybook (I strongly encourage you to check it out, see more below) for faster approval and tweaks from peers. I would also spend far more time on the mobile friendly layout until that was rock solid.  The production application would be a mirror of the mocks or very close.  Any and all image asssets would be compressed using TinyPNG or similar.  I used code-splitting and preload for speed, which I would also do in production, as well as ship with Docker setup and integrated with a CI like CircleCi or similar.  Also, I would use react-final-form, formik or one of the newer, much lighter form solutions. I would have an open channel to creative to ensure everything is done to spec.  Lastly, I would bang on the app looking for ways to break it, then hand it off to someone else to do the same or an actual QA runner.
+
+# Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
