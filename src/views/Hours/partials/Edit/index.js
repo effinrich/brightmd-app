@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Box } from 'reflexbox'
 import { reduxForm, FieldArray } from 'redux-form'
 
 import Hours from 'components/Hours'
@@ -13,14 +12,9 @@ const validationRules = {
 }
 
 const EditHours = props => {
-  const { handleSubmit, initialValues, error: submissionError } = props
+  const { handleSubmit, initialValues } = props
   return (
     <form onSubmit={handleSubmit}>
-      {submissionError && (
-        <Box my={2} color="red">
-          {submissionError}
-        </Box>
-      )}
       <FieldArray
         name="hours"
         component={Hours}

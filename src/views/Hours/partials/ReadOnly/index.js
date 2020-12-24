@@ -19,14 +19,14 @@ const ReadOnly = ({ hours: operatingHours }) => {
     moment(padStart(time, 4, 0), 'Hmm').format('h:mm A')
 
   const renderDay = (day, i) => (
-    <Flex key={i} justifyContent="space-between" width={[1, 1 / 2]}>
+    <Flex key={i} justifyContent="space-between" width={[1, 1 / 2]} mb={'45px'}>
       <Box width={1 / 2} minWidth={110} pl={36}>
         {day.size > 0 ? (
-          <BodyCopy fontSize={16} fontWeight={500} mt={4}>
+          <BodyCopy fontSize={16} fontWeight={500} mb={0} mt={0}>
             OPEN
           </BodyCopy>
         ) : (
-          <BodyCopy fontSize={16} fontWeight={500} mt={4}>
+          <BodyCopy fontSize={16} fontWeight={500} mb={0} mt={0}>
             CLOSED
           </BodyCopy>
         )}
@@ -34,7 +34,7 @@ const ReadOnly = ({ hours: operatingHours }) => {
       <Box width={1 / 2} minWidth={150}>
         {day.size > 0 &&
           day.map((hours, i) => (
-            <BodyCopy key={i} fontSize={16} fontWeight={500} mt={4}>
+            <BodyCopy key={i} fontSize={16} fontWeight={500} mb={0} mt={0}>
               {[
                 formatTime(hours.getIn(['open', 'time'])),
                 formatTime(hours.getIn(['close', 'time']))

@@ -90,11 +90,11 @@ const Hours = props => {
         provide care. Patients will be informed if they submit an exam outside
         of these hours.
       </BodyCopy>
-      <Flex justifyContent="space-between" width={1}>
+      <Flex justifyContent="space-between" width={1} mt={3}>
         <Box width={1 / 8} minWidth={[100, 140]}>
           {customer.hours.map((day, i) => (
-            <Flex key={i}>
-              <BodyCopy fontSize={16} fontWeight={500} mt={4}>
+            <Flex key={i} mb={'45px'}>
+              <BodyCopy fontSize={16} fontWeight={500} mb={0} mt={0}>
                 {dayMap[i]}
               </BodyCopy>
             </Flex>

@@ -73,7 +73,7 @@ const TimeSlotField = props => {
   return (
     <TabletDown>
       {isTablet => (
-        <Flex alignItems="center" mt={3}>
+        <Flex alignItems="center">
           <Box width={1 / 2} pr={1}>
             <Field
               className="__startTime__"

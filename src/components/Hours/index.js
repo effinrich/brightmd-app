@@ -32,12 +32,16 @@ const Hours = ({ fields: dayFields, meta, ...restProps }) => {
   return (
     <StyledHours {...restProps}>
       {dayFields.map((day, index) => (
-        <Flex key={index} justifyContent="space-between" width={[1, 1 / 2]}>
+        <Flex
+          key={index}
+          justifyContent="space-between"
+          width={[1, 1 / 2]}
+          mb={'37px'}
+        >
           <Box width={[1 / 2, 1 / 2]}>
             <Field
               name={`${day}.enabled`}
               component={ToggleField}
-              mt={4}
               label={dayFields.get(index).enabled ? 'OPEN' : 'CLOSED'}
               labelPosition="right"
             />

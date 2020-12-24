@@ -66,7 +66,7 @@ export const StyledTimeFieldContainer = styled.div`
 
   &:before,
   &:after {
-    top: 31px;
+    top: 24px;
     content: '';
     position: absolute;
     height: 2px;
