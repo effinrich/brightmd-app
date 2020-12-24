@@ -27,12 +27,14 @@
     "redux": "^4.0.5",
     "redux-form": "^8.2.6",
     "reflexbox": "^4.0.6",
+    "source-map-explorer": "^2.5.1",
     "styled-components": "^5.2.1",
     "styled-system": "^5.1.5",
     "typescript": "^4.1.3",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "start": "FORCE_COLOR=true react-scripts start",
     "build": "FORCE_COLOR=true react-scripts build",
     "test": "FORCE_COLOR=true react-scripts test test -u --watch --env=jsdom",
