@@ -4,9 +4,11 @@
 - Jazz it up - I used a few of the components from the UI library I created for Freebird.  These include the hours form, the animated inputs, Image component and more.  Albeit an antiquated solution, I used redux-form to handle the form data state management as that's a perfect use for redux-form.  I also created a actions/reducers to fetch the customer data via local JSON file to simulate a production app's user and app flow.   
 
 ## Prompt #1:
-CD to bright-md root and run the following terminal commands to run app locally:
+CD to bright-md directory and run the following terminal commands to run app locally:
 1. `yarn` - this installs dependencies
-2. `yarn start` - this starts the project server and opens a tab in your browser when ready.
+2. `yarn start` - to start the project server, which opens the React app in your browser when ready.
+3. `yarn build` - to build for production.
+4. `yarn run analyze` - to analyze production build performance using [source-map-explorer](https://www.npmjs.com/package/source-map-explorer).
 
 ## Prompt #2:
 For production I would write unit tests and create components via storybook (I strongly encourage you to check it out, see more in the next section.) for faster approval on changes and code/design pairing with peers. I would also spend far more time on the mobile friendly layout until that was rock solid.  The production application would be a mirror of the mocks or very close.  Any and all image assets would be compressed using TinyPNG or similar.  I used code-splitting and preload for speed, which I would also do in production, as well as ship with Docker setup and integrated with a CI like CircleCi or similar.  All unnecessary console logs would be removed; the project and files would be cleaned up as well.  Also, I would use react-final-form, formik or one of the newer, much lighter form solutions. I would have an open channel with creative to ensure everything is done to spec.  Lastly, I would bang on the app looking for ways to break it, then hand it off to someone else to do the same or an actual QA runner.
