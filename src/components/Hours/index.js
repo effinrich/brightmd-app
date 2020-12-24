@@ -31,18 +31,8 @@ class Hours extends React.PureComponent {
 
   render() {
     const { fields: dayFields, meta, ...restProps } = this.props
-
     return (
       <StyledHours {...restProps}>
-        {/* eslint-disable react/prop-types */}
-        {(meta.submitFailed || meta.dirty) &&
-          ((meta.error && (
-            <StyledHoursMessage error>{meta.error}</StyledHoursMessage>
-          )) ||
-            (meta.warning && (
-              <StyledHoursMessage warning>{meta.warning}</StyledHoursMessage>
-            )))}
-        {/* eslint-enable react/prop-types */}
         {dayFields.map((day, index) => (
           <Flex key={index} justifyContent="space-between" width={[1, 1 / 2]}>
             <Box width={[1 / 2, 1 / 2]}>
@@ -66,6 +56,15 @@ class Hours extends React.PureComponent {
             </Box>
           </Flex>
         ))}
+        {/* eslint-disable react/prop-types */}
+        {(meta.submitFailed || meta.dirty) &&
+          ((meta.error && (
+            <StyledHoursMessage error>{meta.error}</StyledHoursMessage>
+          )) ||
+            (meta.warning && (
+              <StyledHoursMessage warning>{meta.warning}</StyledHoursMessage>
+            )))}
+        {/* eslint-enable react/prop-types */}
       </StyledHours>
     )
   }

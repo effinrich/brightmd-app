@@ -89,6 +89,7 @@ const TimeSlotField = props => {
                   currentValue
                 )
               }
+              expandLabel={isTablet}
             />
           </Box>
           <Box width={1 / 2} pl={1}>
@@ -106,6 +107,7 @@ const TimeSlotField = props => {
                   currentValue
                 )
               }
+              expandLabel={isTablet}
             />
           </Box>
         </Flex>

@@ -4,6 +4,14 @@ import { Box } from 'reflexbox'
 import { reduxForm, Field } from 'redux-form'
 
 import InputField from 'components/InputField'
+import { required } from 'utils/validations'
+
+const validationRules = {
+  // business details
+  fullName: [required('Full Name is required')],
+  shortName: [required('Short Name')],
+  welcomeText: [required('Welcome Text is required')]
+}
 
 const EditBranding = props => {
   const { handleSubmit, error: submissionError } = props
@@ -14,7 +22,7 @@ const EditBranding = props => {
         label="Full Name"
         name="fullName"
         component={InputField}
-        // validate={validationRules.confirmPassword}
+        validate={validationRules.fullName}
         type="text"
         placeholder="Full Name"
         width={1}
@@ -23,7 +31,7 @@ const EditBranding = props => {
         label="Short Name"
         name="shortName"
         component={InputField}
-        // validate={validationRules.confirmPassword}
+        validate={validationRules.shortName}
         type="text"
         placeholder="Short Name"
         width={1}
@@ -32,7 +40,7 @@ const EditBranding = props => {
         label="Welcome Text"
         name="welcomeText"
         component={InputField}
-        // validate={validationRules.confirmPassword}
+        validate={validationRules.welcomeText}
         type="text"
         placeholder="Welcome Text"
         width={1}
