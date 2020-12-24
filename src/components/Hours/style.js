@@ -5,19 +5,18 @@ import theme from 'theme'
 
 export const StyledHoursMessage = styled.div`
   ${space};
-  font-size: 14px;
-  margin: 8px 0 8px;
-  padding: 4px;
-  text-align: center;
+  font-size: 16px;
+   margin-top: 8px;
+  padding-left: 4px; 
   border-radius: 4px;
   color: ${({ error, warning }) => {
-    if (error) return 'white'
-    if (warning) return 'white'
-  }};
-  background-color: ${({ error, warning }) => {
     if (error) return theme.errorColor
     if (warning) return theme.warningColor
   }};
+  /* background-color: ${({ error, warning }) => {
+    if (error) return theme.errorColor
+    if (warning) return theme.warningColor
+  }}; */
 `
 
 export default styled.div`

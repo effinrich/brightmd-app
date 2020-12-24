@@ -82,7 +82,6 @@ const TimeSlotField = props => {
               component={TimeField}
               parse={event => timeSlotHandlers.handleParseTime(props)(event)}
               format={event => timeSlotHandlers.handleFormatTime(props)(event)}
-              // validate={validationRules.hours}
               onChange={(event, currentValue) =>
                 timeSlotHandlers.handleStartTimeFieldChange(props)(
                   event,
@@ -100,7 +99,6 @@ const TimeSlotField = props => {
               component={TimeField}
               parse={event => timeSlotHandlers.handleParseTime(props)(event)}
               format={event => timeSlotHandlers.handleFormatTime(props)(event)}
-              // validate={validationRules.hours}
               onChange={(event, currentValue) =>
                 timeSlotHandlers.handleEndTimeFieldChange(props)(
                   event,

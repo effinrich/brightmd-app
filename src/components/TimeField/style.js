@@ -8,7 +8,6 @@ export default styled.div`
   ${space};
 
   position: relative;
-  /* line-height: 24px; */
 
   .flatpickr-time input {
     font-size: 16px;
@@ -20,7 +19,6 @@ export default styled.div`
     height: 100%;
     width: 100%;
     background-color: transparent;
-    /* top: 8px; */
     outline: none;
     padding: 0;
     font-size: 16px;

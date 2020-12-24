@@ -16,13 +16,13 @@ const propTypes = {
   maxWidth: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    PropTypes.array,
+    PropTypes.array
   ]),
   // If true, a default error image isn't rendered.
   // This is used in case you want to load another image
   // on error instead of the placeholder
   altImage: PropTypes.bool,
-  showSpinner: PropTypes.bool,
+  showSpinner: PropTypes.bool
 }
 
 const defaultProps = {
@@ -30,7 +30,7 @@ const defaultProps = {
   thumb: false,
   border: false,
   altImage: false,
-  showSpinner: false,
+  showSpinner: false
 }
 
 const Image = ({
@@ -42,19 +42,16 @@ const Image = ({
   ...styledProps
 }) => {
   const [error, setError] = useState(false)
-  // const [loaded, setLoaded] = useState(false)
   const [isLoading, setIsLoading] = useState(showSpinner)
 
   const handleImageLoaded = () => {
     setError(false)
-    // setLoaded(true)
     setIsLoading(false)
   }
 
   const handleImageError = () => {
     if (!altImage) {
       setError(false)
-      // setLoaded(true)
       setIsLoading(false)
     }
   }

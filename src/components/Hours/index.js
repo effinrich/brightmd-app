@@ -12,63 +12,63 @@ import StyledHours, { StyledHoursMessage } from './style'
 
 import TimeSlotField from './partials/TimeSlotField'
 
-class Hours extends React.PureComponent {
-  static propTypes = {
-    fields: PropTypes.object,
-    change: PropTypes.func,
-    initialValues: PropTypes.object,
-    meta: PropTypes.shape({
-      touched: PropTypes.bool,
-      error: PropTypes.string,
-      warning: PropTypes.string,
-      submitFailed: PropTypes.bool
-    })
-  }
-
-  static defaultProps = {
-    mt: 0
-  }
-
-  render() {
-    const { fields: dayFields, meta, ...restProps } = this.props
-    return (
-      <StyledHours {...restProps}>
-        {dayFields.map((day, index) => (
-          <Flex key={index} justifyContent="space-between" width={[1, 1 / 2]}>
-            <Box width={[1 / 2, 1 / 2]}>
-              <Field
-                name={`${day}.enabled`}
-                component={ToggleField}
-                mt={4}
-                label={dayFields.get(index).enabled ? 'OPEN' : 'CLOSED'}
-                labelPosition="right"
-              />
-            </Box>
-            <Box width={[3 / 4, 1 / 2]}>
-              {dayFields.get(index).enabled && (
-                <FieldArray
-                  name={`${day}.hours`}
-                  dayIndex={index}
-                  component={TimeSlotsFieldArray}
-                  rerenderOnEveryChange
-                />
-              )}
-            </Box>
-          </Flex>
-        ))}
-        {/* eslint-disable react/prop-types */}
-        {(meta.submitFailed || meta.dirty) &&
-          ((meta.error && (
-            <StyledHoursMessage error>{meta.error}</StyledHoursMessage>
-          )) ||
-            (meta.warning && (
-              <StyledHoursMessage warning>{meta.warning}</StyledHoursMessage>
-            )))}
-        {/* eslint-enable react/prop-types */}
-      </StyledHours>
-    )
-  }
+const propTypes = {
+  fields: PropTypes.object,
+  change: PropTypes.func,
+  initialValues: PropTypes.object,
+  meta: PropTypes.shape({
+    touched: PropTypes.bool,
+    error: PropTypes.string,
+    warning: PropTypes.string,
+    submitFailed: PropTypes.bool
+  })
 }
+
+const defaultProps = {
+  mt: 0
+}
+
+const Hours = ({ fields: dayFields, meta, ...restProps }) => {
+  return (
+    <StyledHours {...restProps}>
+      {dayFields.map((day, index) => (
+        <Flex key={index} justifyContent="space-between" width={[1, 1 / 2]}>
+          <Box width={[1 / 2, 1 / 2]}>
+            <Field
+              name={`${day}.enabled`}
+              component={ToggleField}
+              mt={4}
+              label={dayFields.get(index).enabled ? 'OPEN' : 'CLOSED'}
+              labelPosition="right"
+            />
+          </Box>
+          <Box width={[3 / 4, 1 / 2]}>
+            {dayFields.get(index).enabled && (
+              <FieldArray
+                name={`${day}.hours`}
+                dayIndex={index}
+                component={TimeSlotsFieldArray}
+                rerenderOnEveryChange
+              />
+            )}
+          </Box>
+        </Flex>
+      ))}
+      {/* eslint-disable react/prop-types */}
+      {(meta.submitFailed || meta.dirty) &&
+        ((meta.error && (
+          <StyledHoursMessage error>{meta.error}</StyledHoursMessage>
+        )) ||
+          (meta.warning && (
+            <StyledHoursMessage warning>{meta.warning}</StyledHoursMessage>
+          )))}
+      {/* eslint-enable react/prop-types */}
+    </StyledHours>
+  )
+}
+
+Hours.propTypes = propTypes
+Hours.defaultProps = defaultProps
 
 export default connect(null, { change })(Hours)
 

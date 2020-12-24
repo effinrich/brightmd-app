@@ -17,7 +17,7 @@ const EditHours = props => {
   return (
     <form onSubmit={handleSubmit}>
       {submissionError && (
-        <Box my={2} color="black">
+        <Box my={2} color="red">
           {submissionError}
         </Box>
       )}
