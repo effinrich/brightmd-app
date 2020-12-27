@@ -42,7 +42,7 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "chromatic": "npx chromatic --project-token=67pl2emih92"
+    "chromatic": "npx chromatic --exit-once-uploaded --project-token=67pl2emih92"
   },
   "browserslist": {
     "production": [
