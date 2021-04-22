@@ -43,7 +43,7 @@
     "build-storybook": "build-storybook -s public",
     "build-storybook-docs": "build-storybook -s public --docs",
     "release": "auto shipit --base-branch=master",
-    "chromatic": "npx chromatic --exit-once-uploaded --project-token=67pl2emih92"
+    "chromatic": "npx chromatic --exit-once-uploaded --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "browserslist": {
     "production": [
