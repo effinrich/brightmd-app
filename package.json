@@ -9,7 +9,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "@types/redux-form": "^8.1.1",
-    "axios": "^0.21.0",
+    "axios": "^1.6.0",
     "immutable": "^4.0.0-rc.12",
     "lodash": "^4.17.20",
     "logrocket": "^1.0.14",
